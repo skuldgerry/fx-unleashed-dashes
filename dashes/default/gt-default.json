@@ -1,0 +1,1222 @@
+{
+  "FormatVersion": 2,
+  "Id": "gt-default",
+  "Name": "GT default (based on the Lovely Dashboard)",
+  "Author": "Rafael Gomes",
+  "Description": "Default dash for any game. Layout after the Lovely Dashboard (Lovely Sim Racing), drawn from scratch with shapes and text only.",
+  "Elements": [
+    {
+      "Type": "box",
+      "Name": "Session frame",
+      "X": 12,
+      "Y": 4,
+      "W": 238,
+      "H": 56,
+      "Color": "#909090",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "value",
+      "Name": "Session",
+      "X": 16,
+      "Y": 16,
+      "W": 230,
+      "H": 32,
+      "Bind": "sessionTypeName",
+      "Format": "text",
+      "Font": 94,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "OFFLINE TESTING",
+        "LONE QUALIFY"
+      ],
+      "PreviewText": "RACE",
+      "Empty": ""
+    },
+    {
+      "Type": "box",
+      "Name": "Tyres frame",
+      "X": 12,
+      "Y": 66,
+      "W": 238,
+      "H": 286,
+      "Color": "#909090",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "label",
+      "Name": "Tyres label",
+      "X": 16,
+      "Y": 70,
+      "W": 230,
+      "H": 32,
+      "Text": "TIRES",
+      "Font": 94,
+      "Color": "#909090",
+      "Align": "center"
+    },
+    {
+      "Type": "value",
+      "Name": "P FL",
+      "X": 20,
+      "Y": 106,
+      "W": 108,
+      "H": 50,
+      "Bind": "ncalc:if([TyrePressureUnit]='Psi', format([TyrePressureFrontLeft], '0.0'), if([TyrePressureUnit]='Kpa', format([TyrePressureFrontLeft], '0'), format([TyrePressureFrontLeft], '0.00')))",
+      "Format": "text",
+      "Font": 110,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "28.8",
+        "1.65",
+        "188"
+      ],
+      "PreviewText": "26.6",
+      "Empty": "-"
+    },
+    {
+      "Type": "value",
+      "Name": "T FL",
+      "X": 20,
+      "Y": 160,
+      "W": 108,
+      "H": 32,
+      "Bind": "ncalc:[TyreTemperatureFrontLeft]",
+      "Format": "0",
+      "Font": 94,
+      "Color": "#20E040",
+      "Align": "center",
+      "Samples": [
+        "188"
+      ],
+      "PreviewText": "84",
+      "Empty": "-",
+      "ColorBind": "ncalc:[TyreTemperatureFrontLeft]",
+      "ColorStops": [
+        {
+          "Value": 50,
+          "Color": "#00B0FF"
+        },
+        {
+          "Value": 80,
+          "Color": "#20E040"
+        },
+        {
+          "Value": 105,
+          "Color": "#FF2020"
+        }
+      ]
+    },
+    {
+      "Type": "value",
+      "Name": "P FR",
+      "X": 134,
+      "Y": 106,
+      "W": 108,
+      "H": 50,
+      "Bind": "ncalc:if([TyrePressureUnit]='Psi', format([TyrePressureFrontRight], '0.0'), if([TyrePressureUnit]='Kpa', format([TyrePressureFrontRight], '0'), format([TyrePressureFrontRight], '0.00')))",
+      "Format": "text",
+      "Font": 110,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "28.8",
+        "1.65",
+        "188"
+      ],
+      "PreviewText": "26.6",
+      "Empty": "-"
+    },
+    {
+      "Type": "value",
+      "Name": "T FR",
+      "X": 134,
+      "Y": 160,
+      "W": 108,
+      "H": 32,
+      "Bind": "ncalc:[TyreTemperatureFrontRight]",
+      "Format": "0",
+      "Font": 94,
+      "Color": "#20E040",
+      "Align": "center",
+      "Samples": [
+        "188"
+      ],
+      "PreviewText": "84",
+      "Empty": "-",
+      "ColorBind": "ncalc:[TyreTemperatureFrontRight]",
+      "ColorStops": [
+        {
+          "Value": 50,
+          "Color": "#00B0FF"
+        },
+        {
+          "Value": 80,
+          "Color": "#20E040"
+        },
+        {
+          "Value": 105,
+          "Color": "#FF2020"
+        }
+      ]
+    },
+    {
+      "Type": "value",
+      "Name": "P RL",
+      "X": 20,
+      "Y": 226,
+      "W": 108,
+      "H": 50,
+      "Bind": "ncalc:if([TyrePressureUnit]='Psi', format([TyrePressureRearLeft], '0.0'), if([TyrePressureUnit]='Kpa', format([TyrePressureRearLeft], '0'), format([TyrePressureRearLeft], '0.00')))",
+      "Format": "text",
+      "Font": 110,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "28.8",
+        "1.65",
+        "188"
+      ],
+      "PreviewText": "26.6",
+      "Empty": "-"
+    },
+    {
+      "Type": "value",
+      "Name": "T RL",
+      "X": 20,
+      "Y": 280,
+      "W": 108,
+      "H": 32,
+      "Bind": "ncalc:[TyreTemperatureRearLeft]",
+      "Format": "0",
+      "Font": 94,
+      "Color": "#20E040",
+      "Align": "center",
+      "Samples": [
+        "188"
+      ],
+      "PreviewText": "84",
+      "Empty": "-",
+      "ColorBind": "ncalc:[TyreTemperatureRearLeft]",
+      "ColorStops": [
+        {
+          "Value": 50,
+          "Color": "#00B0FF"
+        },
+        {
+          "Value": 80,
+          "Color": "#20E040"
+        },
+        {
+          "Value": 105,
+          "Color": "#FF2020"
+        }
+      ]
+    },
+    {
+      "Type": "value",
+      "Name": "P RR",
+      "X": 134,
+      "Y": 226,
+      "W": 108,
+      "H": 50,
+      "Bind": "ncalc:if([TyrePressureUnit]='Psi', format([TyrePressureRearRight], '0.0'), if([TyrePressureUnit]='Kpa', format([TyrePressureRearRight], '0'), format([TyrePressureRearRight], '0.00')))",
+      "Format": "text",
+      "Font": 110,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "28.8",
+        "1.65",
+        "188"
+      ],
+      "PreviewText": "26.6",
+      "Empty": "-"
+    },
+    {
+      "Type": "value",
+      "Name": "T RR",
+      "X": 134,
+      "Y": 280,
+      "W": 108,
+      "H": 32,
+      "Bind": "ncalc:[TyreTemperatureRearRight]",
+      "Format": "0",
+      "Font": 94,
+      "Color": "#20E040",
+      "Align": "center",
+      "Samples": [
+        "188"
+      ],
+      "PreviewText": "84",
+      "Empty": "-",
+      "ColorBind": "ncalc:[TyreTemperatureRearRight]",
+      "ColorStops": [
+        {
+          "Value": 50,
+          "Color": "#00B0FF"
+        },
+        {
+          "Value": 80,
+          "Color": "#20E040"
+        },
+        {
+          "Value": 105,
+          "Color": "#FF2020"
+        }
+      ]
+    },
+    {
+      "Type": "box",
+      "Name": "Delta frame",
+      "X": 258,
+      "Y": 4,
+      "W": 254,
+      "H": 56,
+      "Color": "#D040FF",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "value",
+      "Name": "Delta",
+      "X": 262,
+      "Y": 7,
+      "W": 246,
+      "H": 50,
+      "Bind": "delta",
+      "Format": "delta",
+      "Font": 110,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "+88.88"
+      ],
+      "PreviewText": "-0.07",
+      "Empty": "-.--",
+      "PositiveColor": "#FF2020",
+      "NegativeColor": "#20E040"
+    },
+    {
+      "Type": "box",
+      "Name": "Gear frame",
+      "X": 258,
+      "Y": 66,
+      "W": 254,
+      "H": 222,
+      "Color": "#909090",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "value",
+      "Name": "Gear",
+      "X": 262,
+      "Y": 70,
+      "W": 246,
+      "H": 170,
+      "Bind": "gearText",
+      "Format": "gear",
+      "Font": 103,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "8",
+        "N",
+        "R"
+      ],
+      "PreviewText": "2",
+      "Empty": "N"
+    },
+    {
+      "Type": "value",
+      "Name": "RPM",
+      "X": 262,
+      "Y": 242,
+      "W": 246,
+      "H": 32,
+      "Bind": "rpm",
+      "Format": "0",
+      "Font": 94,
+      "Color": "#909090",
+      "Align": "center",
+      "Samples": [
+        "18888"
+      ],
+      "PreviewText": "6085",
+      "Empty": "-"
+    },
+    {
+      "Type": "bar",
+      "Name": "RPM bar",
+      "X": 264,
+      "Y": 276,
+      "W": 242,
+      "H": 8,
+      "Bind": "rpmPercent",
+      "Min": 50,
+      "Max": 100,
+      "Color": "#20E040",
+      "Fill": "#202020",
+      "ColorBind": "rpmPercent",
+      "ColorStops": [
+        {
+          "Value": 85,
+          "Color": "#20E040"
+        },
+        {
+          "Value": 94,
+          "Color": "#FFD000"
+        },
+        {
+          "Value": 98,
+          "Color": "#FF2020"
+        }
+      ]
+    },
+    {
+      "Type": "box",
+      "Name": "Speed frame",
+      "X": 300,
+      "Y": 294,
+      "W": 170,
+      "H": 58,
+      "Color": "#FFFFFF",
+      "Fill": "#FFFFFF",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "value",
+      "Name": "Speed",
+      "X": 306,
+      "Y": 298,
+      "W": 158,
+      "H": 50,
+      "Bind": "speed",
+      "Format": "0",
+      "Font": 110,
+      "Color": "#000000",
+      "Align": "center",
+      "Samples": [
+        "388"
+      ],
+      "PreviewText": "125",
+      "Empty": "-",
+      "Background": "#FFFFFF"
+    },
+    {
+      "Type": "box",
+      "Name": "TC frame",
+      "X": 12,
+      "Y": 358,
+      "W": 96,
+      "H": 96,
+      "Color": "#00B0FF",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "label",
+      "Name": "TC label",
+      "X": 16,
+      "Y": 361,
+      "W": 88,
+      "H": 32,
+      "Text": "TC",
+      "Font": 94,
+      "Color": "#00B0FF",
+      "Align": "center"
+    },
+    {
+      "Type": "value",
+      "Name": "TC",
+      "X": 16,
+      "Y": 398,
+      "W": 88,
+      "H": 50,
+      "Bind": "tcLevel",
+      "Format": "0",
+      "Font": 110,
+      "Color": "#00B0FF",
+      "Align": "center",
+      "Samples": [
+        "88"
+      ],
+      "PreviewText": "3",
+      "Empty": "-"
+    },
+    {
+      "Type": "box",
+      "Name": "TC2 frame",
+      "X": 113,
+      "Y": 358,
+      "W": 96,
+      "H": 96,
+      "Color": "#00B0FF",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "label",
+      "Name": "TC2 label",
+      "X": 117,
+      "Y": 361,
+      "W": 88,
+      "H": 32,
+      "Text": "TC2",
+      "Font": 94,
+      "Color": "#00B0FF",
+      "Align": "center"
+    },
+    {
+      "Type": "value",
+      "Name": "TC2",
+      "X": 117,
+      "Y": 398,
+      "W": 88,
+      "H": 50,
+      "Bind": "tcCut",
+      "Format": "0",
+      "Font": 110,
+      "Color": "#00B0FF",
+      "Align": "center",
+      "Samples": [
+        "88"
+      ],
+      "PreviewText": "0",
+      "Empty": "-"
+    },
+    {
+      "Type": "box",
+      "Name": "ABS frame",
+      "X": 214,
+      "Y": 358,
+      "W": 96,
+      "H": 96,
+      "Color": "#FFD000",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "label",
+      "Name": "ABS label",
+      "X": 218,
+      "Y": 361,
+      "W": 88,
+      "H": 32,
+      "Text": "ABS",
+      "Font": 94,
+      "Color": "#FFD000",
+      "Align": "center"
+    },
+    {
+      "Type": "value",
+      "Name": "ABS",
+      "X": 218,
+      "Y": 398,
+      "W": 88,
+      "H": 50,
+      "Bind": "absLevel",
+      "Format": "0",
+      "Font": 110,
+      "Color": "#FFD000",
+      "Align": "center",
+      "Samples": [
+        "88"
+      ],
+      "PreviewText": "2",
+      "Empty": "-"
+    },
+    {
+      "Type": "box",
+      "Name": "BB frame",
+      "X": 315,
+      "Y": 358,
+      "W": 96,
+      "H": 96,
+      "Color": "#FF2020",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "label",
+      "Name": "BB label",
+      "X": 319,
+      "Y": 361,
+      "W": 88,
+      "H": 32,
+      "Text": "BB",
+      "Font": 94,
+      "Color": "#FF2020",
+      "Align": "center"
+    },
+    {
+      "Type": "value",
+      "Name": "BB",
+      "X": 319,
+      "Y": 398,
+      "W": 88,
+      "H": 50,
+      "Bind": "brakeBias",
+      "Format": "0.0",
+      "Font": 110,
+      "Color": "#FF2020",
+      "Align": "center",
+      "Samples": [
+        "88.8"
+      ],
+      "PreviewText": "56.2",
+      "Empty": "-"
+    },
+    {
+      "Type": "box",
+      "Name": "MAP frame",
+      "X": 416,
+      "Y": 358,
+      "W": 96,
+      "H": 96,
+      "Color": "#20E040",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "label",
+      "Name": "MAP label",
+      "X": 420,
+      "Y": 361,
+      "W": 88,
+      "H": 32,
+      "Text": "MAP",
+      "Font": 94,
+      "Color": "#20E040",
+      "Align": "center"
+    },
+    {
+      "Type": "value",
+      "Name": "MAP",
+      "X": 420,
+      "Y": 398,
+      "W": 88,
+      "H": 50,
+      "Bind": "engineMap",
+      "Format": "0",
+      "Font": 110,
+      "Color": "#20E040",
+      "Align": "center",
+      "Samples": [
+        "88"
+      ],
+      "PreviewText": "1",
+      "Empty": "-"
+    },
+    {
+      "Type": "box",
+      "Name": "Race frame",
+      "X": 520,
+      "Y": 4,
+      "W": 258,
+      "H": 92,
+      "Color": "#909090",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "label",
+      "Name": "Position label",
+      "X": 524,
+      "Y": 7,
+      "W": 122,
+      "H": 32,
+      "Text": "POS",
+      "Font": 94,
+      "Color": "#909090",
+      "Align": "center"
+    },
+    {
+      "Type": "value",
+      "Name": "Position",
+      "X": 524,
+      "Y": 42,
+      "W": 122,
+      "H": 50,
+      "Bind": "position",
+      "Format": "0",
+      "Font": 110,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "188"
+      ],
+      "PreviewText": "11",
+      "Empty": "-"
+    },
+    {
+      "Type": "label",
+      "Name": "Lap label",
+      "X": 652,
+      "Y": 7,
+      "W": 122,
+      "H": 32,
+      "Text": "LAP",
+      "Font": 94,
+      "Color": "#909090",
+      "Align": "center"
+    },
+    {
+      "Type": "value",
+      "Name": "Lap",
+      "X": 652,
+      "Y": 42,
+      "W": 122,
+      "H": 50,
+      "Bind": "lap",
+      "Format": "0",
+      "Font": 110,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "188"
+      ],
+      "PreviewText": "7",
+      "Empty": "-"
+    },
+    {
+      "Type": "box",
+      "Name": "Lap times frame",
+      "X": 520,
+      "Y": 102,
+      "W": 258,
+      "H": 188,
+      "Color": "#909090",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "label",
+      "Name": "Predicted label",
+      "X": 524,
+      "Y": 119,
+      "W": 62,
+      "H": 32,
+      "Text": "EST",
+      "Font": 94,
+      "Color": "#909090",
+      "Align": "left"
+    },
+    {
+      "Type": "value",
+      "Name": "Predicted",
+      "X": 590,
+      "Y": 110,
+      "W": 182,
+      "H": 50,
+      "Bind": "predictedLap",
+      "Format": "laptime",
+      "Font": 110,
+      "Color": "#D040FF",
+      "Align": "center",
+      "Samples": [
+        "8:88.888"
+      ],
+      "PreviewText": "1:44.535",
+      "Empty": "-:--.---"
+    },
+    {
+      "Type": "label",
+      "Name": "Last lap label",
+      "X": 524,
+      "Y": 179,
+      "W": 62,
+      "H": 32,
+      "Text": "LAST",
+      "Font": 94,
+      "Color": "#909090",
+      "Align": "left"
+    },
+    {
+      "Type": "value",
+      "Name": "Last lap",
+      "X": 590,
+      "Y": 170,
+      "W": 182,
+      "H": 50,
+      "Bind": "lastLapTime",
+      "Format": "laptime",
+      "Font": 110,
+      "Color": "#FFD000",
+      "Align": "center",
+      "Samples": [
+        "8:88.888"
+      ],
+      "PreviewText": "1:44.535",
+      "Empty": "-:--.---"
+    },
+    {
+      "Type": "label",
+      "Name": "Best lap label",
+      "X": 524,
+      "Y": 239,
+      "W": 62,
+      "H": 32,
+      "Text": "BEST",
+      "Font": 94,
+      "Color": "#909090",
+      "Align": "left"
+    },
+    {
+      "Type": "value",
+      "Name": "Best lap",
+      "X": 590,
+      "Y": 230,
+      "W": 182,
+      "H": 50,
+      "Bind": "bestLapTime",
+      "Format": "laptime",
+      "Font": 110,
+      "Color": "#20E040",
+      "Align": "center",
+      "Samples": [
+        "8:88.888"
+      ],
+      "PreviewText": "1:44.535",
+      "Empty": "-:--.---"
+    },
+    {
+      "Type": "box",
+      "Name": "Fuel lap frame",
+      "X": 520,
+      "Y": 296,
+      "W": 258,
+      "H": 56,
+      "Color": "#909090",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "label",
+      "Name": "Fuel lap label",
+      "X": 524,
+      "Y": 308,
+      "W": 130,
+      "H": 32,
+      "Text": "FUEL/LAP",
+      "Font": 94,
+      "Color": "#909090",
+      "Align": "left"
+    },
+    {
+      "Type": "value",
+      "Name": "Fuel lap",
+      "X": 660,
+      "Y": 299,
+      "W": 112,
+      "H": 50,
+      "Bind": "fuelLastLap",
+      "Format": "0.00",
+      "Font": 110,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "18.88"
+      ],
+      "PreviewText": "2.69",
+      "Empty": "-"
+    },
+    {
+      "Type": "box",
+      "Name": "Fuel frame",
+      "X": 520,
+      "Y": 358,
+      "W": 258,
+      "H": 96,
+      "Color": "#909090",
+      "Border": 2,
+      "Radius": 10
+    },
+    {
+      "Type": "label",
+      "Name": "Fuel label",
+      "X": 524,
+      "Y": 361,
+      "W": 122,
+      "H": 32,
+      "Text": "FUEL",
+      "Font": 94,
+      "Color": "#909090",
+      "Align": "center"
+    },
+    {
+      "Type": "value",
+      "Name": "Fuel",
+      "X": 524,
+      "Y": 398,
+      "W": 122,
+      "H": 50,
+      "Bind": "fuel",
+      "Format": "0.0",
+      "Font": 110,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "188.8"
+      ],
+      "PreviewText": "14.0",
+      "Empty": "-"
+    },
+    {
+      "Type": "label",
+      "Name": "Fuel laps label",
+      "X": 652,
+      "Y": 361,
+      "W": 122,
+      "H": 32,
+      "Text": "LAPS",
+      "Font": 94,
+      "Color": "#909090",
+      "Align": "center"
+    },
+    {
+      "Type": "value",
+      "Name": "Fuel laps",
+      "X": 652,
+      "Y": 398,
+      "W": 122,
+      "H": 50,
+      "Bind": "fuelRemainingLaps",
+      "Format": "0.0",
+      "Font": 110,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "88.8"
+      ],
+      "PreviewText": "5.4",
+      "Empty": "-"
+    },
+    {
+      "Type": "rect",
+      "Name": "Pit limiter background",
+      "X": 258,
+      "Y": 4,
+      "W": 254,
+      "H": 56,
+      "Color": "#00B0FF",
+      "Visible": "pitLimiter",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "label",
+      "Name": "Pit limiter",
+      "X": 260,
+      "Y": 16,
+      "W": 250,
+      "H": 32,
+      "Text": "PIT LIMITER",
+      "Font": 94,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Visible": "pitLimiter",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "rect",
+      "Name": "Yellow flag background",
+      "X": 12,
+      "Y": 4,
+      "W": 238,
+      "H": 56,
+      "Color": "#FFD000",
+      "Visible": "ncalc:[Flag_Yellow]",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "label",
+      "Name": "Yellow flag",
+      "X": 14,
+      "Y": 16,
+      "W": 234,
+      "H": 32,
+      "Text": "YELLOW FLAG",
+      "Font": 94,
+      "Color": "#000000",
+      "Align": "center",
+      "Visible": "ncalc:[Flag_Yellow]",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "rect",
+      "Name": "Blue flag background",
+      "X": 12,
+      "Y": 4,
+      "W": 238,
+      "H": 56,
+      "Color": "#0050FF",
+      "Visible": "ncalc:[Flag_Blue]",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "label",
+      "Name": "Blue flag",
+      "X": 14,
+      "Y": 16,
+      "W": 234,
+      "H": 32,
+      "Text": "BLUE FLAG",
+      "Font": 94,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Visible": "ncalc:[Flag_Blue]",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "box",
+      "Name": "TC popup",
+      "X": 258,
+      "Y": 66,
+      "W": 254,
+      "H": 176,
+      "Color": "#00B0FF",
+      "Fill": "#101418",
+      "Border": 4,
+      "Radius": 10,
+      "Visible": "ncalc:changed(2000, [TCLevel])",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "label",
+      "Name": "TC popup label",
+      "X": 264,
+      "Y": 74,
+      "W": 242,
+      "H": 32,
+      "Text": "TC",
+      "Font": 94,
+      "Color": "#00B0FF",
+      "Align": "center",
+      "Visible": "ncalc:changed(2000, [TCLevel])",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "value",
+      "Name": "TC popup value",
+      "X": 264,
+      "Y": 112,
+      "W": 242,
+      "H": 100,
+      "Bind": "tcLevel",
+      "Format": "0",
+      "Font": 82,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "88"
+      ],
+      "PreviewText": "3",
+      "Empty": "-",
+      "Background": "#101418",
+      "Visible": "ncalc:changed(2000, [TCLevel])",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "box",
+      "Name": "TC2 popup",
+      "X": 258,
+      "Y": 66,
+      "W": 254,
+      "H": 176,
+      "Color": "#00B0FF",
+      "Fill": "#101418",
+      "Border": 4,
+      "Radius": 10,
+      "Visible": "ncalc:changed(2000, isnull([DataCorePlugin.GameRawData.Telemetry.dcTractionControl2], 0))",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "label",
+      "Name": "TC2 popup label",
+      "X": 264,
+      "Y": 74,
+      "W": 242,
+      "H": 32,
+      "Text": "TC2",
+      "Font": 94,
+      "Color": "#00B0FF",
+      "Align": "center",
+      "Visible": "ncalc:changed(2000, isnull([DataCorePlugin.GameRawData.Telemetry.dcTractionControl2], 0))",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "value",
+      "Name": "TC2 popup value",
+      "X": 264,
+      "Y": 112,
+      "W": 242,
+      "H": 100,
+      "Bind": "tcCut",
+      "Format": "0",
+      "Font": 82,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "88"
+      ],
+      "PreviewText": "0",
+      "Empty": "-",
+      "Background": "#101418",
+      "Visible": "ncalc:changed(2000, isnull([DataCorePlugin.GameRawData.Telemetry.dcTractionControl2], 0))",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "box",
+      "Name": "ABS popup",
+      "X": 258,
+      "Y": 66,
+      "W": 254,
+      "H": 176,
+      "Color": "#FFD000",
+      "Fill": "#101418",
+      "Border": 4,
+      "Radius": 10,
+      "Visible": "ncalc:changed(2000, [ABSLevel])",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "label",
+      "Name": "ABS popup label",
+      "X": 264,
+      "Y": 74,
+      "W": 242,
+      "H": 32,
+      "Text": "ABS",
+      "Font": 94,
+      "Color": "#FFD000",
+      "Align": "center",
+      "Visible": "ncalc:changed(2000, [ABSLevel])",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "value",
+      "Name": "ABS popup value",
+      "X": 264,
+      "Y": 112,
+      "W": 242,
+      "H": 100,
+      "Bind": "absLevel",
+      "Format": "0",
+      "Font": 82,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "88"
+      ],
+      "PreviewText": "2",
+      "Empty": "-",
+      "Background": "#101418",
+      "Visible": "ncalc:changed(2000, [ABSLevel])",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "box",
+      "Name": "BB popup",
+      "X": 258,
+      "Y": 66,
+      "W": 254,
+      "H": 176,
+      "Color": "#FF2020",
+      "Fill": "#101418",
+      "Border": 4,
+      "Radius": 10,
+      "Visible": "ncalc:changed(2000, [BrakeBias])",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "label",
+      "Name": "BB popup label",
+      "X": 264,
+      "Y": 74,
+      "W": 242,
+      "H": 32,
+      "Text": "BRAKE BIAS",
+      "Font": 94,
+      "Color": "#FF2020",
+      "Align": "center",
+      "Visible": "ncalc:changed(2000, [BrakeBias])",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "value",
+      "Name": "BB popup value",
+      "X": 264,
+      "Y": 112,
+      "W": 242,
+      "H": 100,
+      "Bind": "brakeBias",
+      "Format": "0.0",
+      "Font": 82,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "88.8"
+      ],
+      "PreviewText": "56.2",
+      "Empty": "-",
+      "Background": "#101418",
+      "Visible": "ncalc:changed(2000, [BrakeBias])",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "box",
+      "Name": "MAP popup",
+      "X": 258,
+      "Y": 66,
+      "W": 254,
+      "H": 176,
+      "Color": "#20E040",
+      "Fill": "#101418",
+      "Border": 4,
+      "Radius": 10,
+      "Visible": "ncalc:changed(2000, [EngineMap])",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "label",
+      "Name": "MAP popup label",
+      "X": 264,
+      "Y": 74,
+      "W": 242,
+      "H": 32,
+      "Text": "ENGINE MAP",
+      "Font": 94,
+      "Color": "#20E040",
+      "Align": "center",
+      "Visible": "ncalc:changed(2000, [EngineMap])",
+      "PreviewVisible": false
+    },
+    {
+      "Type": "value",
+      "Name": "MAP popup value",
+      "X": 264,
+      "Y": 112,
+      "W": 242,
+      "H": 100,
+      "Bind": "engineMap",
+      "Format": "0",
+      "Font": 82,
+      "Color": "#FFFFFF",
+      "Align": "center",
+      "Samples": [
+        "88"
+      ],
+      "PreviewText": "1",
+      "Empty": "-",
+      "Background": "#101418",
+      "Visible": "ncalc:changed(2000, [EngineMap])",
+      "PreviewVisible": false
+    }
+  ]
+}
