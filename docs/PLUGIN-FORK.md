@@ -24,8 +24,22 @@ is in it. This repository holds only dashes and tools.
 | 3 | Make clear that "Your lights" is the look while driving, and where the rest is | done: subtitle and links to every part |
 | 4 | Surface hidden behaviours: encoder setting levels, "Hold still", "Side lights dark", rev bar extras, the per-car nudge actions | done: levels as a switch of their own, notes on the effect, play buttons with info, bindings in the rev editor |
 | 2 | Try a light mode on the wheel without driving | done: play / stop on every part of the editor, "Show on the wheel"; upstream 0.7.4 added a play-once preview, both kept |
-| 1 | The headlight-flash button lights when the sim really flashes | done: alerts on a single button (by number, through the button map) and a hold time after the condition; the FX Pro's usual button map built in |
-| 6 | Shift-light stages the light data can't express (McLaren 720S, Corvette Z06, the M4's white dots) | built, then dropped: FX Unleashed 0.7.6 reads iRacing cars' own lights from the sim, stages included |
+| 1 | The headlight-flash button lights when the sim really flashes | done: alerts on single buttons (picked on a drawing of the wheel) and a hold time after the condition; the FX Pro's usual button map built in |
+| 6 | Shift-light stages the light data can't express (McLaren 720S, Corvette Z06, the M4's white dots) | done: the M4 and 720S use their measured lights before 0.7.6's game data (which keeps only each light's first colour); stages past the shift point for any car in Car tuning |
+
+## Later
+
+Ideas for a later version of FX Unleashed Enhanced, not started:
+
+- **Import a zip of dashes.** The Dashes tab's "Import a file…" (and dropping onto the tab) takes only `.fxdash.json`
+  files (`Ui/DashShareUi.cs`, `Usb/DashShare.cs`). Taking a zip as well, each `.fxdash.json` inside imported with the
+  same checks, would let the releases' all-dashes zip go in without unzipping it first.
+- **A driver number screensaver, like the Lovely Dashboard's idle screen.** The user types a number and a name, each with
+  its colour, and picks how the number looks: flat (as in the Lovely Dashboard) or with an effect (to be decided). It
+  would be one of the built-in screensavers, there by default, instead of making a picture and uploading it as a
+  screensaver. The built-in ones (`Usb/ArtSavers.cs`: lights out, tacho, pit board, chequered) already paint their art
+  once on the PC and then send only the animation; their art is cached per type, so this one would need it cached per
+  number, name and colours.
 
 Measured in iRacing on 2026-10-12: `dcHeadlightFlash` is true for only about 70 ms per press and doesn't follow the light
 sequence, so an alert that follows the value is a single frame. The hold time is what makes it usable.
