@@ -40,6 +40,28 @@ Ideas for a later version of FX Unleashed Enhanced, not started:
   screensaver. The built-in ones (`Usb/ArtSavers.cs`: lights out, tacho, pit board, chequered) already paint their art
   once on the PC and then send only the animation; their art is cached per type, so this one would need it cached per
   number, name and colours.
+- **A colour of its own for single buttons and encoders, while driving.** In "Your lights", next to a group's effect
+  (Buttons, Encoders...), pick buttons or encoders on the drawing of the wheel (as for single-button alerts,
+  `Ui/ButtonPicker.cs`) and give each a colour that stays theirs: the TC encoder always blue, the pit limiter button always
+  red, easy to find. Per button, a choice of:
+  - **steady**: just that colour;
+  - **the group's effect in that colour**: the effect keeps its movement and brightness (plasma, breathing, blinking)
+    but in shades of the chosen colour instead of the group's colours. For effects made of several colours (plasma), use
+    the effect's brightness at that light times the chosen colour.
+
+  Alerts still go over them as now. It would sit as one more layer in the lights engine (`Usb/Lights.cs`), after the
+  group's effect and before the alerts, on the button lights the button map (`UsbSettings.ButtonMap`) points to.
+- **Each car's real wheel colours (needs a small database; the last of these, and the most work).** For each car, the
+  colours of the real car's wheel by zone of the wheel (top buttons, the sides, the encoders, the bottom...), taken from
+  pictures and manuals of the real wheel, put on the same zones of the FX Pro: a visual thing only, steady by default or
+  a gentle effect that keeps the colours (pulse), for the feeling of sitting in the real car. Not a 1:1 copy (the
+  wheels' buttons differ), and the per-button colours above still apply on top. Builds on the per-car presets
+  (`UsbSettings.CarLights`); the data would be a JSON per car (zone → colour), with car ids taken from the plugin's log as
+  for the dashes, never invented.
+  Not by what each button does: the plugin can't know which FX Pro button is the pit limiter or the radio. That would
+  need a menu to say it, or reading SimHub's Control Mapper, which could be odd where it is driven by an Arduino.
+
+Order: the per-button colours first (maybe next), the cars' wheel colours last.
 
 Measured in iRacing on 2026-10-12: `dcHeadlightFlash` is true for only about 70 ms per press and doesn't follow the light
 sequence, so an alert that follows the value is a single frame. The hold time is what makes it usable.
