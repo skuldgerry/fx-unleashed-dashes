@@ -45,28 +45,21 @@ these are conversions of Redadeg's LMU dashes ([lmu-dashboards.com](https://lmu-
 repository; `scripts/patch-iracing.ps1` makes the iRacing copy of such a dash from your own install (see
 [docs/CONTEXT.md](docs/CONTEXT.md) for why LMU dashes lose elements in iRacing).
 
-## Install a dash
+## Install
 
-Copy the dash's JSON into SimHub's dash folder for the plugin, then pick it for a car in the plugin's Dashes tab:
+Everything is in the **[Releases](https://github.com/skuldgerry/fx-unleashed-dashes/releases)**, as files the plugin
+imports itself.
 
-```
-C:\Program Files (x86)\SimHub\PluginsData\Common\FXProRpmSync\Dashes\
-```
+- **Dashes**: download one `.fxdash.json`, or the pack (a zip with all of them, unzip it), then in the plugin's **Dashes**
+  tab press **Import a file…** and pick them (several at once is fine), or drop them onto the tab. Then pick a dash for a
+  car there.
+- **My profile**: download `skuldgerry.fxsettings.zip` and import it with **About > Backup > Import settings…** (FX
+  Unleashed Enhanced); it is applied the next time SimHub starts. It brings:
+  - the light preset `skuldgerry` (based on Neon Tokyo) with its alerts, pit limiter and rev lights;
+  - all the dashes above, the default dash for every car and each iRacing GT3 on its own dash.
 
-or `python scripts/fx.py install dashes/gt3-iracing/<dash>.json` (`--dry-run` first to see where it goes).
-
-## My profile
-
-My whole FX Unleashed setup, with all the dashes above, in one file:
-**[profile/skuldgerry.fxsettings.zip](profile/skuldgerry.fxsettings.zip)**. Import it in the plugin with **About > Backup >
-Import settings…** (FX Unleashed Enhanced); it is applied the next time SimHub starts.
-
-- **Lights**: the preset `skuldgerry` (based on Neon Tokyo) with its alerts, pit limiter and rev lights.
-- **Dashes**: the default dash for every car, and each iRacing GT3 of this repository on its own dash.
-- It **replaces your current settings** (the plugin keeps a copy of them first, and never takes what belongs to your PC
+  It **replaces your current settings** (the plugin keeps a copy of them first, and never takes what belongs to your PC
   and wheel: firmware, screen and update settings). Export your own from the same card first if you want to go back.
-
-`profile/skuldgerry.fxsettings.json` is the same settings in readable form; `scripts/make_profile.py` builds the zip.
 
 ## Making and checking dashes
 
@@ -115,7 +108,7 @@ powershell -ExecutionPolicy Bypass -File scripts\assign-dashes.ps1 -WhatIf   # e
 | Folder | What |
 |---|---|
 | `dashes/` | the dashes (JSON), our own work only, written by `scripts/make_*.py` |
-| `profile/` | my plugin setup to import (`scripts/make_profile.py`) |
+| `profile/` | my plugin setup in readable form; `scripts/make_profile.py` builds the file to import from it |
 | `templates/` | a starting point (`example-gt.json`, from FX Unleashed's docs; passes every check) |
 | `scripts/dashkit.py`, `scripts/make_*.py` | shared parts and the generators of the dashes |
 | `scripts/gates_api.py`, `scripts/fx.py` | the four checks through the plugin's API; a wrapper for `fxdash` (setup, gates, render, install, carids) |

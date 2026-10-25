@@ -2,14 +2,15 @@
 """make_profile.py - my FX Unleashed setup as a file anyone can import (About > Backup > Import settings).
 
   python scripts/make_profile.py --from-simhub   # refresh profile/skuldgerry.fxsettings.json from this PC's settings
-  python scripts/make_profile.py                 # build profile/skuldgerry.fxsettings.zip (settings + this repo's dashes)
+  python scripts/make_profile.py                 # build out/release/skuldgerry.fxsettings.zip (settings + this repo's dashes)
 
 The file is what the plugin's own export writes (SettingsTransfer.Export): the settings without what belongs to one PC
 and one wheel. On top of that, for sharing:
   - the light preset gets a neutral name;
   - dashes per car point only at dashes of this repository (cars on any other dash are left out, so they use the default
     dash), and the old id of the default dash becomes gt-default.
-The zip carries this repository's dashes, so an import brings them too. An import replaces the settings of whoever
+The zip carries this repository's dashes, so an import brings them too; it goes into a release of this repository
+(out/ is not in git). An import replaces the settings of whoever
 imports it (the plugin keeps a copy of theirs first).
 """
 import argparse
@@ -99,7 +100,8 @@ def build_zip():
     used = {r[2:] for r in usb.get("DefaultDashes", [])}
     used |= {r[2:] for d in usb.get("CarDashes", {}).values() for r in d.get("Dashes", [])}
     ours = our_dashes()
-    out = OUT / f"{NAME}.fxsettings.zip"
+    out = ROOT / "out" / "release" / f"{NAME}.fxsettings.zip"
+    out.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("settings.fxsettings.json", src.read_bytes())
         for dash_id in sorted(used):
