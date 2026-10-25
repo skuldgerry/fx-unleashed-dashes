@@ -7,6 +7,7 @@ check and measure them.
 - **iRacing GT3 replicas**: what each car shows on its own display, one dash per car, from iRacing's manuals and from
   frames of the sim.
 - **A default dash** for every other car and game, laid out after the Lovely Dashboard's main screen.
+- **My profile**: my plugin setup (lights, alerts, a dash per car) as one file to import.
 - **Tools**: generators for the dashes, the plugin's four checks through its local API, converting LMU dashes for iRacing,
   and recording the sim's shift lights frame by frame.
 
@@ -53,6 +54,19 @@ C:\Program Files (x86)\SimHub\PluginsData\Common\FXProRpmSync\Dashes\
 ```
 
 or `python scripts/fx.py install dashes/gt3-iracing/<dash>.json` (`--dry-run` first to see where it goes).
+
+## My profile
+
+My whole FX Unleashed setup, with all the dashes above, in one file:
+**[profile/skuldgerry.fxsettings.zip](profile/skuldgerry.fxsettings.zip)**. Import it in the plugin with **About > Backup >
+Import settings…** (FX Unleashed Enhanced); it is applied the next time SimHub starts.
+
+- **Lights**: the preset `skuldgerry` (based on Neon Tokyo) with its alerts, pit limiter and rev lights.
+- **Dashes**: the default dash for every car, and each iRacing GT3 of this repository on its own dash.
+- It **replaces your current settings** (the plugin keeps a copy of them first, and never takes what belongs to your PC
+  and wheel: firmware, screen and update settings). Export your own from the same card first if you want to go back.
+
+`profile/skuldgerry.fxsettings.json` is the same settings in readable form; `scripts/make_profile.py` builds the zip.
 
 ## Making and checking dashes
 
@@ -101,6 +115,7 @@ powershell -ExecutionPolicy Bypass -File scripts\assign-dashes.ps1 -WhatIf   # e
 | Folder | What |
 |---|---|
 | `dashes/` | the dashes (JSON), our own work only, written by `scripts/make_*.py` |
+| `profile/` | my plugin setup to import (`scripts/make_profile.py`) |
 | `templates/` | a starting point (`example-gt.json`, from FX Unleashed's docs; passes every check) |
 | `scripts/dashkit.py`, `scripts/make_*.py` | shared parts and the generators of the dashes |
 | `scripts/gates_api.py`, `scripts/fx.py` | the four checks through the plugin's API; a wrapper for `fxdash` (setup, gates, render, install, carids) |

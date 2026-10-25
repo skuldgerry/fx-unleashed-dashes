@@ -1,0 +1,627 @@
+{
+  "Format": "fx-unleashed-settings",
+  "FormatVersion": 1,
+  "SettingsVersion": 2,
+  "Plugin": "0.7.6",
+  "ExportedUtc": "2026-10-25T00:44:29Z",
+  "Settings": {
+    "Mode": "Unlocked",
+    "Enabled": true,
+    "UseCarDatabase": true,
+    "LiveGearCurves": true,
+    "Fallback": {
+      "Pattern": 0,
+      "Colors": 0,
+      "Color1": "#00ff84",
+      "Color2": "#fffd51",
+      "Color3": "#ff0054",
+      "StartPercent": 85.0,
+      "Flash": 0,
+      "FlashColor": "#0006ff"
+    },
+    "Overrides": {},
+    "DashSwitching": true,
+    "LearnDashes": true,
+    "CarDashes": {},
+    "Base": {
+      "Enabled": false,
+      "Cars": {},
+      "Games": {}
+    },
+    "Feed": {
+      "Enabled": false,
+      "Gaps": 0,
+      "Delta": 0,
+      "Overrides": {}
+    },
+    "Usb": {
+      "Enabled": true,
+      "DashEnabled": true,
+      "PreloadRotation": true,
+      "NoRamDashes": [],
+      "DashId": "lmgt3-mustang",
+      "DashPages": {},
+      "PadLeft": 10,
+      "PadTop": 20,
+      "LightsEnabled": true,
+      "IdleLights": true,
+      "ScreenSaver": true,
+      "LightPreset": "user-484f3855",
+      "CustomLights": null,
+      "ReverseRev": false,
+      "Mirror": {
+        "Frame": "Bezel",
+        "FrameColor": "#FF1F2D",
+        "Corners": 10,
+        "RevLights": true,
+        "SideLights": true,
+        "LightStyle": "Dots",
+        "LightsAt": "Above",
+        "Background": "Transparent",
+        "HideWhenIdle": false,
+        "Fps": 20,
+        "IsFollowRev": false
+      },
+      "LightsFrom": "BuiltIn",
+      "AtsrDevice": null,
+      "AtsrMap": "",
+      "AtsrBrightness": true,
+      "SpotterOverExternal": true,
+      "CarDashes": {
+        "IRacing | bmwm4gt3": {
+          "CarKey": "IRacing | bmwm4gt3",
+          "Game": null,
+          "CarId": null,
+          "CarName": "IRacing | bmwm4gt3",
+          "Dashes": [
+            "c:bmw-m4-gt3-iracing"
+          ],
+          "Current": 0,
+          "UpdatedUtc": "2026-10-11T21:40:11.1698228Z",
+          "WheelDash": false,
+          "DashId": null
+        },
+        "IRacing | audir8lmsevo2gt3": {
+          "CarKey": "IRacing | audir8lmsevo2gt3",
+          "Game": "IRacing",
+          "CarId": "audir8lmsevo2gt3",
+          "CarName": "Audi R8 LMS EVO II GT3",
+          "Dashes": [
+            "c:audi-r8-lms-gt3-iracing"
+          ],
+          "Current": 0,
+          "UpdatedUtc": "2026-10-11T22:55:51.0192267Z",
+          "WheelDash": false,
+          "DashId": null
+        },
+        "IRacing | lamborghinievogt3": {
+          "CarKey": "IRacing | lamborghinievogt3",
+          "Game": "IRacing",
+          "CarId": "lamborghinievogt3",
+          "CarName": "Lamborghini Huracan GT3 EVO",
+          "Dashes": [
+            "c:lamborghini-huracan-gt3-iracing"
+          ],
+          "Current": 0,
+          "UpdatedUtc": "2026-10-11T22:55:51.0202284Z",
+          "WheelDash": false,
+          "DashId": null
+        },
+        "IRacing | chevyvettez06rgt3": {
+          "CarKey": "IRacing | chevyvettez06rgt3",
+          "Game": "IRacing",
+          "CarId": "chevyvettez06rgt3",
+          "CarName": "Chevrolet Corvette Z06 GT3.R",
+          "Dashes": [
+            "c:corvette-z06-gt3r-iracing"
+          ],
+          "Current": 0,
+          "UpdatedUtc": "2026-10-11T22:55:51.0202284Z",
+          "WheelDash": false,
+          "DashId": null
+        }
+      },
+      "DefaultDashes": [
+        "c:gt-default"
+      ],
+      "DefaultCurrent": 0,
+      "UserLights": [
+        {
+          "Id": "user-484f3855",
+          "Name": "skuldgerry",
+          "Description": "Based on Neon Tokyo",
+          "MaxBrightness": 90,
+          "Groups": {
+            "Buttons": {
+              "Effect": "Plasma",
+              "Colors": [
+                "#00F0FF",
+                "#7FDBFF",
+                "#00A0FF",
+                "#0020FF"
+              ],
+              "Period": 2.0,
+              "Brightness": 100,
+              "FlashOnChange": true,
+              "DiffSource": null,
+              "Stagger": false,
+              "Gauges": null
+            },
+            "Encoders": {
+              "Effect": "Levels",
+              "Colors": [
+                "#7B2FFF",
+                "#C000FF",
+                "#FF6090"
+              ],
+              "Period": 5.0,
+              "Brightness": 100,
+              "FlashOnChange": true,
+              "DiffSource": null,
+              "Stagger": false,
+              "Gauges": null
+            },
+            "SideLeft": {
+              "Effect": "Heartbeat",
+              "Colors": [
+                "#FF2E97"
+              ],
+              "Period": 2.0,
+              "Brightness": 100,
+              "FlashOnChange": true,
+              "DiffSource": null,
+              "Stagger": false,
+              "Gauges": null
+            },
+            "SideRight": {
+              "Effect": "Heartbeat",
+              "Colors": [
+                "#00F0FF"
+              ],
+              "Period": 2.0,
+              "Brightness": 100,
+              "FlashOnChange": true,
+              "DiffSource": null,
+              "Stagger": false,
+              "Gauges": null
+            },
+            "Rev": {
+              "Effect": "Rpm",
+              "Colors": [
+                "#FFFFFF"
+              ],
+              "Period": 4.0,
+              "Brightness": 100,
+              "FlashOnChange": true,
+              "DiffSource": null,
+              "Stagger": false,
+              "Gauges": null
+            }
+          },
+          "Rev": {
+            "UseCarData": true,
+            "StartPercent": 75.0,
+            "Colors": [
+              "#00FF40",
+              "#FFB000",
+              "#FF0020"
+            ],
+            "FlashColor": "#0040FF",
+            "FlashHz": 8.0,
+            "Pattern": 1
+          },
+          "Alerts": [
+            {
+              "Trigger": "SpotterLeft",
+              "Enabled": true,
+              "Color": "#FF0000",
+              "Groups": [
+                "ButtonsLeft"
+              ],
+              "BlinkHz": 2.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "SpotterRight",
+              "Enabled": true,
+              "Color": "#FF0000",
+              "Groups": [
+                "ButtonsRight"
+              ],
+              "BlinkHz": 2.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "Abs",
+              "Enabled": true,
+              "Color": "#FFB000",
+              "Groups": [
+                "SideLeft",
+                "SideRight"
+              ],
+              "BlinkHz": 12.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "Tc",
+              "Enabled": true,
+              "Color": "#00A0FF",
+              "Groups": [
+                "SideRight",
+                "SideLeft"
+              ],
+              "BlinkHz": 12.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "PitLimiter",
+              "Enabled": true,
+              "Color": "#FFFF00",
+              "Groups": [],
+              "BlinkHz": 3.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [
+                20,
+                19,
+                5,
+                6,
+                8,
+                3,
+                2,
+                1,
+                21,
+                41
+              ],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "BlackFlag",
+              "Enabled": true,
+              "Color": "#FF0020",
+              "Groups": [
+                "Encoders"
+              ],
+              "BlinkHz": 4.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "OrangeFlag",
+              "Enabled": true,
+              "Color": "#FF6000",
+              "Groups": [
+                "Encoders"
+              ],
+              "BlinkHz": 2.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "BlueFlag",
+              "Enabled": true,
+              "Color": "#0040FF",
+              "Groups": [
+                "Encoders"
+              ],
+              "BlinkHz": 2.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "YellowFlag",
+              "Enabled": true,
+              "Color": "#FFD000",
+              "Groups": [
+                "Encoders"
+              ],
+              "BlinkHz": 2.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "CheckeredFlag",
+              "Enabled": true,
+              "Color": "#FFFFFF",
+              "Groups": [
+                "Encoders",
+                "Rev"
+              ],
+              "BlinkHz": 3.0,
+              "Style": "Checker",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "WhiteFlag",
+              "Enabled": true,
+              "Color": "#FFFFFF",
+              "Groups": [
+                "Encoders"
+              ],
+              "BlinkHz": 1.0,
+              "Style": "Pulse",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "GreenFlag",
+              "Enabled": true,
+              "Color": "#00FF40",
+              "Groups": [
+                "Rev"
+              ],
+              "BlinkHz": 2.0,
+              "Style": "Sweep",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "LowFuel",
+              "Enabled": true,
+              "Color": "#FF5000",
+              "Groups": [
+                "SideLeft",
+                "SideRight"
+              ],
+              "BlinkHz": 1.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "Drs",
+              "Enabled": false,
+              "Color": "#00FF40",
+              "Groups": [
+                "Encoders"
+              ],
+              "BlinkHz": 0.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "RevLimiter",
+              "Enabled": true,
+              "Color": "#FF0020",
+              "Groups": [
+                "Rev"
+              ],
+              "BlinkHz": 12.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "InvalidLap",
+              "Enabled": true,
+              "Color": "#FF0020",
+              "Groups": [
+                "Encoders"
+              ],
+              "BlinkHz": 0.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "Stalled",
+              "Enabled": true,
+              "Color": "#FF0020",
+              "Groups": [
+                "Buttons"
+              ],
+              "BlinkHz": 1.0,
+              "Style": "Pulse",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "IndicatorLeft",
+              "Enabled": true,
+              "Color": "#FFA000",
+              "Groups": [
+                "SideLeft"
+              ],
+              "BlinkHz": 0.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "IndicatorRight",
+              "Enabled": true,
+              "Color": "#FFA000",
+              "Groups": [
+                "SideRight"
+              ],
+              "BlinkHz": 0.0,
+              "Style": "Flash",
+              "Name": null,
+              "Condition": null,
+              "Buttons": [],
+              "HoldSeconds": 0.0
+            },
+            {
+              "Trigger": "Custom",
+              "Enabled": true,
+              "Color": "#FFFF00",
+              "Groups": [],
+              "BlinkHz": 4.0,
+              "Style": "Flash",
+              "Name": "Flash",
+              "Condition": "DataCorePlugin.GameRawData.Telemetry.dcHeadlightFlash",
+              "Buttons": [
+                4
+              ],
+              "HoldSeconds": 2.5
+            }
+          ],
+          "Looks": {
+            "Idle": {
+              "Brightness": 80,
+              "Effect": "Rainbow",
+              "Colors": [
+                "#FF2E97",
+                "#00F0FF",
+                "#7B2FFF"
+              ],
+              "Period": 2.0,
+              "RevBar": true
+            },
+            "EngineOff": {
+              "Brightness": 80,
+              "Effect": "Ripple",
+              "Colors": [
+                "#1A0033",
+                "#00F0FF",
+                "#FF2E97"
+              ],
+              "Period": 2.0,
+              "RevBar": true
+            },
+            "Menu": {
+              "Brightness": 80,
+              "Effect": "RainbowBreathe",
+              "Colors": [
+                "#FF2E97",
+                "#00F0FF",
+                "#7B2FFF"
+              ],
+              "Period": 2.0,
+              "RevBar": true
+            }
+          },
+          "Startup": "Sweep",
+          "Shutdown": "Collapse",
+          "Limiter": {
+            "Style": "Checker",
+            "Colors": [
+              "#FF2E97",
+              "#00F0FF"
+            ],
+            "Hz": 2.0,
+            "WholeWheel": false,
+            "Pattern": null,
+            "FromGame": false,
+            "Frames": null,
+            "BySpeed": null
+          },
+          "RevTint": 0,
+          "StillWhileDriving": false,
+          "SidesDarkWhileDriving": true,
+          "UseGameLimiter": true,
+          "Extras": {
+            "PitSpeed": true,
+            "LiftCoast": true,
+            "Refuel": true,
+            "BrakeBias": true,
+            "Launch": false
+          }
+        }
+      ],
+      "Savers": [],
+      "SaverId": "logo",
+      "SaverRotation": [],
+      "SaverSwitchMinutes": 0,
+      "WheelButtons": {
+        "next": 41
+      },
+      "DashSlot": 41,
+      "UpperPaddles": true,
+      "ClutchMode": 0,
+      "UpperPaddleA": 42,
+      "UpperPaddleB": 43,
+      "ScreenBrightness": 100,
+      "SleepEnabled": false,
+      "SleepMinutes": 10,
+      "ScreenOff": false,
+      "LedCeiling": 90,
+      "NightMode": false,
+      "NightScreenBrightness": 25,
+      "NightLedCeiling": 20,
+      "NightSchedule": false,
+      "NightFrom": "22:00",
+      "NightTo": "07:00",
+      "NightFollowAtsr": false,
+      "CarLights": {},
+      "GameLights": {},
+      "PressLights": false,
+      "PressColor": "#FFFF00",
+      "ButtonLeds": {
+        "3": 6,
+        "20": 0,
+        "19": 1,
+        "5": 2,
+        "6": 3,
+        "7": 4,
+        "8": 5,
+        "4": 7,
+        "2": 8,
+        "1": 9,
+        "21": 10,
+        "41": 11
+      },
+      "ActiveWheel": "fxpro",
+      "Wheels": {},
+      "CarLimiters": {},
+      "CarLaunch": {},
+      "AlertUpgrades": 1,
+      "PitSpeeds": {},
+      "RevLightsOnly": false
+    },
+    "Updates": {
+      "AutoCheck": true,
+      "Channel": "Stable"
+    },
+    "SettingsVersion": 2
+  }
+}
