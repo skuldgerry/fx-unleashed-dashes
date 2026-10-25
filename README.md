@@ -125,4 +125,4 @@ powershell -ExecutionPolicy Bypass -File scripts\assign-dashes.ps1 -WhatIf   # e
 [MIT](LICENSE): use, change and share the dashes and scripts freely, keeping the copyright notice. The copies from FX
 Unleashed (`docs/reference/`, `templates/example-gt.json`) stay under its GPL-3.0.
 
-By Rafael Gomes ([skuldgerry](https://github.com/skuldgerry)).
+By [skuldgerry](https://github.com/skuldgerry).

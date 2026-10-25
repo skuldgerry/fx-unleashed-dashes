@@ -19,7 +19,7 @@ param(
     [Parameter(Mandatory = $true)][string]$Dash,
     [string]$Out,
     [string]$Id,
-    [string]$Author = 'Rafael Gomes'
+    [string]$Author = 'skuldgerry'
 )
 $ErrorActionPreference = 'Stop'
 

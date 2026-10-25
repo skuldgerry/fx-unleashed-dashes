@@ -139,7 +139,7 @@ dash = {
     "FormatVersion": 2,
     "Id": OUT.stem,
     "Name": "GT default (based on the Lovely Dashboard)",
-    "Author": "Rafael Gomes",
+    "Author": "skuldgerry",
     "Description": "Default dash for any game. Layout after the Lovely Dashboard (Lovely Sim Racing), "
                    "drawn from scratch with shapes and text only.",
     "Elements": els,

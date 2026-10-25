@@ -198,7 +198,7 @@ class Dash:
         """Saves one version's elements: "text" (repository) or "logo" (local)."""
         other = "logo" if variant == "text" else "text"
         els = [{k: v for k, v in e.items() if k != "_variant"} for e in self.els if e.get("_variant") != other]
-        d = {"FormatVersion": 2, "Id": self.out.stem, "Name": self.name, "Author": "Rafael Gomes",
+        d = {"FormatVersion": 2, "Id": self.out.stem, "Name": self.name, "Author": "skuldgerry",
              "Description": self.description, "Elements": els}
         images = dict(self.images, **(self.local_images if variant == "logo" else {}))
         if images:

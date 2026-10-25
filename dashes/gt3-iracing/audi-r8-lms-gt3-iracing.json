@@ -2,7 +2,7 @@
   "FormatVersion": 2,
   "Id": "audi-r8-lms-gt3-iracing",
   "Name": "iRacing - Audi R8 LMS GT3",
-  "Author": "Rafael Gomes",
+  "Author": "skuldgerry",
   "Description": "Replica of the Audi R8 LMS EVO II GT3's display in iRacing, made from iRacing's manual. Shapes and text only.",
   "Elements": [
     {

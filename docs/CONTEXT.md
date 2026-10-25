@@ -73,7 +73,7 @@ Diagnosis (2026-10-11, static analysis plus SimHub's formula engine, then confir
 
 - Car ids come from the plugin's car light database, never invented.
 - **Converted**: `scripts/patch-iracing.ps1` swaps the LMU-only properties (see the diagnosis) and marks name and author
-  ("iRacing - <car>", "Rafael Gomes (iRacing) / original: Redadeg"). They live only in `out/iracing/` and in SimHub.
+  ("iRacing - <car>", "skuldgerry (iRacing) / original: Redadeg"). They live only in `out/iracing/` and in SimHub.
 - **From scratch**: one `scripts/make_<car>.py` each, common parts in `scripts/dashkit.py`. They write to `dashes/` (the
   repository version, no third-party material) and, when a logo is in `reference/logos/`, also to `out/local/` (the
   version with the logo, the one installed).
