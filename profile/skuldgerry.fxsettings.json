@@ -2,8 +2,8 @@
   "Format": "fx-unleashed-settings",
   "FormatVersion": 1,
   "SettingsVersion": 2,
-  "Plugin": "0.7.6",
-  "ExportedUtc": "2026-10-25T00:44:29Z",
+  "Plugin": "0.7.61",
+  "ExportedUtc": "2026-10-26T00:15:36Z",
   "Settings": {
     "Mode": "Unlocked",
     "Enabled": true,
@@ -135,8 +135,8 @@
             "Buttons": {
               "Effect": "Plasma",
               "Colors": [
-                "#00F0FF",
-                "#7FDBFF",
+                "#ECEFEF",
+                "#6DEAF1",
                 "#00A0FF",
                 "#0020FF"
               ],
@@ -215,12 +215,14 @@
               "Trigger": "SpotterLeft",
               "Enabled": true,
               "Color": "#FF0000",
+              "KeepColour": false,
               "Groups": [
                 "ButtonsLeft"
               ],
               "BlinkHz": 2.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -229,12 +231,14 @@
               "Trigger": "SpotterRight",
               "Enabled": true,
               "Color": "#FF0000",
+              "KeepColour": false,
               "Groups": [
                 "ButtonsRight"
               ],
               "BlinkHz": 2.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -243,6 +247,7 @@
               "Trigger": "Abs",
               "Enabled": true,
               "Color": "#FFB000",
+              "KeepColour": false,
               "Groups": [
                 "SideLeft",
                 "SideRight"
@@ -250,6 +255,7 @@
               "BlinkHz": 12.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -258,6 +264,7 @@
               "Trigger": "Tc",
               "Enabled": true,
               "Color": "#00A0FF",
+              "KeepColour": false,
               "Groups": [
                 "SideRight",
                 "SideLeft"
@@ -265,6 +272,7 @@
               "BlinkHz": 12.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -273,10 +281,12 @@
               "Trigger": "PitLimiter",
               "Enabled": true,
               "Color": "#FFFF00",
+              "KeepColour": false,
               "Groups": [],
               "BlinkHz": 3.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [
                 20,
@@ -296,12 +306,14 @@
               "Trigger": "BlackFlag",
               "Enabled": true,
               "Color": "#FF0020",
+              "KeepColour": false,
               "Groups": [
                 "Encoders"
               ],
               "BlinkHz": 4.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -310,12 +322,14 @@
               "Trigger": "OrangeFlag",
               "Enabled": true,
               "Color": "#FF6000",
+              "KeepColour": false,
               "Groups": [
                 "Encoders"
               ],
               "BlinkHz": 2.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -324,12 +338,14 @@
               "Trigger": "BlueFlag",
               "Enabled": true,
               "Color": "#0040FF",
+              "KeepColour": false,
               "Groups": [
                 "Encoders"
               ],
               "BlinkHz": 2.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -338,12 +354,14 @@
               "Trigger": "YellowFlag",
               "Enabled": true,
               "Color": "#FFD000",
+              "KeepColour": false,
               "Groups": [
                 "Encoders"
               ],
               "BlinkHz": 2.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -352,6 +370,7 @@
               "Trigger": "CheckeredFlag",
               "Enabled": true,
               "Color": "#FFFFFF",
+              "KeepColour": false,
               "Groups": [
                 "Encoders",
                 "Rev"
@@ -359,6 +378,7 @@
               "BlinkHz": 3.0,
               "Style": "Checker",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -367,12 +387,14 @@
               "Trigger": "WhiteFlag",
               "Enabled": true,
               "Color": "#FFFFFF",
+              "KeepColour": false,
               "Groups": [
                 "Encoders"
               ],
               "BlinkHz": 1.0,
               "Style": "Pulse",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -381,12 +403,14 @@
               "Trigger": "GreenFlag",
               "Enabled": true,
               "Color": "#00FF40",
+              "KeepColour": false,
               "Groups": [
                 "Rev"
               ],
               "BlinkHz": 2.0,
               "Style": "Sweep",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -395,6 +419,7 @@
               "Trigger": "LowFuel",
               "Enabled": true,
               "Color": "#FF5000",
+              "KeepColour": false,
               "Groups": [
                 "SideLeft",
                 "SideRight"
@@ -402,6 +427,7 @@
               "BlinkHz": 1.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -410,12 +436,14 @@
               "Trigger": "Drs",
               "Enabled": false,
               "Color": "#00FF40",
+              "KeepColour": false,
               "Groups": [
                 "Encoders"
               ],
               "BlinkHz": 0.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -424,12 +452,14 @@
               "Trigger": "RevLimiter",
               "Enabled": true,
               "Color": "#FF0020",
+              "KeepColour": false,
               "Groups": [
                 "Rev"
               ],
               "BlinkHz": 12.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -438,12 +468,14 @@
               "Trigger": "InvalidLap",
               "Enabled": true,
               "Color": "#FF0020",
+              "KeepColour": false,
               "Groups": [
                 "Encoders"
               ],
               "BlinkHz": 0.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -452,12 +484,14 @@
               "Trigger": "Stalled",
               "Enabled": true,
               "Color": "#FF0020",
+              "KeepColour": false,
               "Groups": [
                 "Buttons"
               ],
               "BlinkHz": 1.0,
               "Style": "Pulse",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -466,12 +500,14 @@
               "Trigger": "IndicatorLeft",
               "Enabled": true,
               "Color": "#FFA000",
+              "KeepColour": false,
               "Groups": [
                 "SideLeft"
               ],
               "BlinkHz": 0.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -480,12 +516,14 @@
               "Trigger": "IndicatorRight",
               "Enabled": true,
               "Color": "#FFA000",
+              "KeepColour": false,
               "Groups": [
                 "SideRight"
               ],
               "BlinkHz": 0.0,
               "Style": "Flash",
               "Name": null,
+              "Note": null,
               "Condition": null,
               "Buttons": [],
               "HoldSeconds": 0.0
@@ -494,15 +532,33 @@
               "Trigger": "Custom",
               "Enabled": true,
               "Color": "#FFFF00",
+              "KeepColour": false,
               "Groups": [],
               "BlinkHz": 4.0,
               "Style": "Flash",
               "Name": "Flash",
+              "Note": "Blinks the flasher button while the car flashes its lights (iRacing's dcHeadlightFlash, held 2.5 s)",
               "Condition": "DataCorePlugin.GameRawData.Telemetry.dcHeadlightFlash",
               "Buttons": [
                 4
               ],
               "HoldSeconds": 2.5
+            },
+            {
+              "Trigger": "Custom",
+              "Enabled": true,
+              "Color": "#B0FF00",
+              "KeepColour": true,
+              "Groups": [],
+              "BlinkHz": 1.0,
+              "Style": "Flash",
+              "Name": "Mic Pulse",
+              "Note": "Pulses the voice button while someone is talking on iRacing's radio",
+              "Condition": "[DataCorePlugin.GameRawData.Telemetry.RadioTransmitCarIdx] >= 0 && [DataCorePlugin.GameRawData.Telemetry.RadioTransmitCarIdx] != [DataCorePlugin.GameRawData.Telemetry.PlayerCarIdx]",
+              "Buttons": [
+                1
+              ],
+              "HoldSeconds": 0.0
             }
           ],
           "Looks": {
@@ -565,7 +621,45 @@
             "Refuel": true,
             "BrakeBias": true,
             "Launch": false
-          }
+          },
+          "OwnColors": [
+            {
+              "Wheel": "fxpro",
+              "Leds": [
+                6
+              ],
+              "Color": "#FF0000",
+              "Effect": null,
+              "KeepEffect": true
+            },
+            {
+              "Wheel": "fxpro",
+              "Leds": [
+                13
+              ],
+              "Color": "#0020FF",
+              "Effect": null,
+              "KeepEffect": true
+            },
+            {
+              "Wheel": "fxpro",
+              "Leds": [
+                12
+              ],
+              "Color": "#17FF00",
+              "Effect": null,
+              "KeepEffect": true
+            },
+            {
+              "Wheel": "fxpro",
+              "Leds": [
+                14
+              ],
+              "Color": "#FFFF00",
+              "Effect": null,
+              "KeepEffect": true
+            }
+          ]
         }
       ],
       "Savers": [],

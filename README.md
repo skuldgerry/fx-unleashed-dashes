@@ -33,12 +33,14 @@ What they add to the cars' own displays:
 
 Everything is in the **[Releases](https://github.com/skuldgerry/fx-unleashed-dashes/releases)**.
 
-- **Dashes**: download one `.fxdash.json`, or the pack with all of them (unzip it). In the plugin's **Dashes** tab press
-  **Import a file…** and pick them, or drop them onto the tab. Then pick a dash for a car there.
+- **Dashes**: download one `.fxdash.json`, or the pack with all of them. In the plugin's **Dashes** tab press
+  **Import a file…** and pick them, or drop them onto the tab (FX Unleashed Enhanced 0.7.61 takes the pack as it is;
+  otherwise unzip it first). Then pick a dash for a car there.
 - **My profile**: download `skuldgerry.fxsettings.zip` and import it with **About > Backup > Import settings…** (FX
-  Unleashed Enhanced); it is applied the next time SimHub starts. It brings the light preset `skuldgerry` (based on Neon
-  Tokyo) with its alerts, and all the dashes above, each iRacing GT3 on its own dash. It **replaces your current
-  settings**: export yours from the same card first if you want to go back.
+  Unleashed Enhanced 0.7.61 or later); it is applied the next time SimHub starts. It brings the light preset `skuldgerry`
+  (based on Neon Tokyo) with its alerts, buttons and encoders in colours of their own, the headlight flash and voice
+  button alerts, and all the dashes above, each iRacing GT3 on its own dash. It **replaces your current settings**: export
+  yours from the same card first if you want to go back.
 
 ## Credits
 

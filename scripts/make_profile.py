@@ -8,7 +8,9 @@ The file is what the plugin's own export writes (SettingsTransfer.Export): the s
 and one wheel. On top of that, for sharing:
   - the light preset gets a neutral name;
   - dashes per car point only at dashes of this repository (cars on any other dash are left out, so they use the default
-    dash), and the old id of the default dash becomes gt-default.
+    dash), and the old id of the default dash becomes gt-default;
+  - no screensavers of mine: my pictures and GIFs are left out (only the plugin's built-in ones can be picked or take
+    turns), and the driver number screensaver's card goes back to its default (it has my name).
 The zip carries this repository's dashes, so an import brings them too; it goes into a release of this repository
 (out/ is not in git). An import replaces the settings of whoever
 imports it (the plugin keeps a copy of theirs first).
@@ -24,9 +26,16 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "profile"
 NAME = "skuldgerry"
 SIMHUB_SETTINGS = Path(r"C:\Program Files (x86)\SimHub\PluginsData\Common\FXProRpmSyncPlugin.GeneralSettings.json")
-PLUGIN = "0.7.6"
+PLUGIN = "0.7.61"
 PRESET_NAME = "skuldgerry"
 RENAMED_DASHES = {"lovely-default": "gt-default"}
+# the plugin's own screensavers (IdleScreens: the logo, the clock, the painted ones, the driver number)
+BUILT_IN_SAVERS = {"logo", "clock", "lights-out", "rev-sweep", "pit-board", "chequered", "driver-number"}
+# custom alerts' notes as shared (by the alert's name); the rest go as written
+SHARED_NOTES = {
+    "Flash": "Blinks the flasher button while the car flashes its lights (iRacing's dcHeadlightFlash, held 2.5 s)",
+    "Mic Pulse": "Pulses the voice button while someone is talking on iRacing's radio",
+}
 
 # SettingsTransfer.ThisPcOnly, plus Usb.TurnedOffSimHubDevice (top level and per wheel)
 THIS_PC_ONLY = [
@@ -74,6 +83,9 @@ def from_simhub():
     for p in usb.get("UserLights") or []:
         if p.get("Id") == usb.get("LightPreset"):
             p["Name"] = PRESET_NAME
+        for a in p.get("Alerts") or []:
+            if a.get("Note") and a.get("Name") in SHARED_NOTES:
+                a["Note"] = SHARED_NOTES[a["Name"]]
 
     usb["DefaultDashes"] = [r for r in (dash_ref(r, ours) for r in usb.get("DefaultDashes") or []) if r] or ["c:gt-default"]
     usb["DefaultCurrent"] = 0
@@ -84,6 +96,13 @@ def from_simhub():
             d["Dashes"], d["Current"], d["DashId"] = refs, 0, None
             kept[car] = d
     usb["CarDashes"] = kept
+
+    # screensavers: only the built-in ones; the driver number's card as new
+    usb["Savers"] = []
+    if usb.get("SaverId") not in BUILT_IN_SAVERS:
+        usb["SaverId"] = "logo"
+    usb["SaverRotation"] = [i for i in usb.get("SaverRotation") or [] if i in BUILT_IN_SAVERS and i != usb["SaverId"]]
+    usb.pop("Driver", None)
 
     export = {"Format": "fx-unleashed-settings", "FormatVersion": 1, "SettingsVersion": s.get("SettingsVersion", 0),
               "Plugin": PLUGIN, "ExportedUtc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "Settings": s}
